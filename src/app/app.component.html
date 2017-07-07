@@ -10,4 +10,12 @@
       </ol>
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <button type="text" (click)="toggleSecretParagraph()" class="btn btn-primary">Display Details</button>
+      <p [ngStyle]="{ display: getDisplay()}">Secret Password = tuna</p>
+
+      <p *ngFor="let status of displayParagraphStatus" [innerText]="this.status"></p>
+    </div>
+  </div>
 </div>
